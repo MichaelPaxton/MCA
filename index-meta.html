@@ -15,7 +15,7 @@
 
     <div id="content">
       <!-- ADD YOUR HTML CONTENT HERE! -->
-      <h1>My project</h1>
+      <h1>My MCA Project</h1>
       <h2>Metadata</h2>
       <p id="meta"></p>
 
@@ -34,7 +34,7 @@
    <script src="js/index.js"></script>
     <script>
       var xhr = new XMLHttpRequest()
-      xhr.open('GET', 'data/example.mei') // <-- change this to the right file
+      xhr.open('GET', 'data/Mars, Bringer of War, Piano Arrangement.mei') // <-- change this to the right file
       xhr.send(null)
 
       /* Deal with the response */
@@ -51,7 +51,15 @@
            /* If your element does not have an authURI attribute, copy the following line, being sure to replace the "MY-XML-ID" with your element's actual xml:id.
             document.querySelector("#meta").innerHTML += "<p>" + meiDoc.querySelector("[*|id='m-8']").textContent + "</p>"
             */
-          }
+          document.querySelector("#meta").innerHTML += "<p>" + meiDoc.querySelector("[*|id='t-1']").textContent + "</p>"
+		  document.querySelector("#meta").innerHTML += "<p>" + meiDoc.querySelector("[*|id='t-2']").textContent + "</p>"
+		  document.querySelector("#meta").innerHTML += "<a href=\"" + meiDoc.querySelector("[*|id='c-1']").getAttribute('authURI') +"\"><p>" + meiDoc.querySelector("[*|id='c-1']").textContent + "</p></a>"
+		  document.querySelector("#meta").innerHTML += "<p>" + meiDoc.querySelector("[*|id='a-1']").textContent + "</p>"
+		  document.querySelector("#meta").innerHTML += "<p>" + meiDoc.querySelector("[*|id='d-1']").textContent + "</p>"
+		  document.querySelector("#meta").innerHTML += "<p>" + meiDoc.querySelector("[*|id='r-1']").textContent + "</p>"
+		  document.querySelector("#meta").innerHTML += "<p>" + meiDoc.querySelector("[*|id='e-1']").textContent + "</p>"
+		  document.querySelector("#meta").innerHTML += "<p>" + meiDoc.querySelector("[*|id='c-2']").textContent + "</p>"
+		  }
         }
       }
     </script>

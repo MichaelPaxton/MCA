@@ -20,4 +20,4 @@ options = {
 vrvToolkit.setOptions(options)
 
 /* Show the score */
-showScore('score', 'data/example.mei') // <-- CHANGE THIS TO YOUR FILE
+showScore('score', 'data/Mars, Bringer of War, Piano Arrangement.mei') // <-- CHANGE THIS TO YOUR FILE
